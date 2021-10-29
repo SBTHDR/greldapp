@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/employees', [EmployeeController::class, 'index']);
+Route::post('/create', [EmployeeController::class, 'store']);
+Route::get('/edit/{id}', [EmployeeController::class, 'edit']);
+Route::post('/update/{id}', [EmployeeController::class, 'update']);
+Route::post('/delete/{id}', [EmployeeController::class, 'destroy']);
+
+Route::get('/{any?}', function () {
     return view('welcome');
-});
+})->where('any', '.*');

@@ -1,4 +1,6 @@
 import Welcome from './components/WelcomeComponent'
+import Create from './components/CreateComponent'
+import Edit from './components/EditComponent'
 export default {
     mode: 'history',
     base: '/',
@@ -7,7 +9,16 @@ export default {
         {
             path: '/',
             component: Welcome,
-            name: Welcome
+            name: 'Welcome'
+        },
+        {
+            path: '/create',
+            component: Create,
+        },
+        {
+            name: 'edit',
+            path: '/edit/:id',
+            component: Edit,
         }
     ]
 }
