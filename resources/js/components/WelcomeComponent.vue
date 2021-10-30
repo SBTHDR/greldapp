@@ -17,8 +17,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="(employee, index) in employees" :key="index">
-                                    <th scope="row">{{ index + 1 }}</th>
+                                <tr v-for="employee in employees" :key="employee.id">
+                                    <th scope="row">{{ employee.id }}</th>
                                     <td>{{ employee.name }}</td>
                                     <td>{{ employee.position }}</td>
                                     <td>{{ employee.email }}</td>

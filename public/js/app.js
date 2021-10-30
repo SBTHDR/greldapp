@@ -41886,10 +41886,10 @@ var render = function () {
                 _vm._v(" "),
                 _c(
                   "tbody",
-                  _vm._l(_vm.employees, function (employee, index) {
-                    return _c("tr", { key: index }, [
+                  _vm._l(_vm.employees, function (employee) {
+                    return _c("tr", { key: employee.id }, [
                       _c("th", { attrs: { scope: "row" } }, [
-                        _vm._v(_vm._s(index + 1)),
+                        _vm._v(_vm._s(employee.id)),
                       ]),
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(employee.name))]),
